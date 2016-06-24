@@ -5,4 +5,4 @@
 ##实现方法
     本Demo主要就是自定义TextView实现Runable接口的run方法，通过自定义属性获取刷新时间和模式，在run方法里根据mode属性的值来实现不同的滚动模式！
 ##项目展示
-    ![image](https://github.com/Winfred1989/MarQueeText/blob/master/screenShot/MarQueeText.gif)
+    ![image](https://raw.githubusercontent.com/Winfred1989/MarQueeText/master/screenShot/MarQueeText.gif)
