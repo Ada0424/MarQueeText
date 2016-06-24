@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jay.marqueetext.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dip"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/start_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="开始" />
+
+        <Button
+            android:id="@+id/pause_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="暂停" />
+
+        <Button
+            android:id="@+id/restart_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="重新开始" />
+    </LinearLayout>
+
+    <com.jay.marqueetext.widget.MarqueeText
+        android:id="@+id/marqueeText"
+        app:mode="rolled"
+        app:speed="50"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linerLayout"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="自定义跑马灯TextView。项目地址：https://github.com/Winfred1989/MarQueeText"
+        android:textColor="@android:color/black" />
+</RelativeLayout>
