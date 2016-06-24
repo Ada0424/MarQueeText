@@ -7,7 +7,7 @@ import android.view.View;
 import com.jay.marqueetext.widget.MarqueeText;
 
 public class MainActivity extends AppCompatActivity {
-    private MarqueeText mMarqueeText;
+    private MarqueeText marqueeText_left,marqueeText_right,marqueeText_rolled;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,22 +18,31 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void findViews() {
-        mMarqueeText=(MarqueeText) findViewById(R.id.marqueeText);
+        marqueeText_left=(MarqueeText) findViewById(R.id.marqueeText_left);
+        marqueeText_right=(MarqueeText) findViewById(R.id.marqueeText_right);
+        marqueeText_rolled=(MarqueeText) findViewById(R.id.marqueeText_rolled);
     }
 
     public void onClick(View v){
         switch (v.getId()){
             case R.id.start_Button:
-                mMarqueeText.startScroll();
+                marqueeText_left.startScroll();
+                marqueeText_right.startScroll();
+                marqueeText_rolled.startScroll();
                 break;
             case R.id.pause_Button:
-                mMarqueeText.pauseScroll();
+                marqueeText_left.pauseScroll();
+                marqueeText_right.pauseScroll();
+                marqueeText_rolled.pauseScroll();
                 break;
             case R.id.restart_Button:
-                mMarqueeText.restartScroll();
+                marqueeText_left.restartScroll();
+                marqueeText_right.restartScroll();
+                marqueeText_rolled.restartScroll();
                 break;
             default:
                 break;
         }
     }
+
 }

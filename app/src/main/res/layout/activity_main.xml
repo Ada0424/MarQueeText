@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.jay.marqueetext.MainActivity">
 
     <LinearLayout
@@ -39,14 +40,38 @@
     </LinearLayout>
 
     <com.jay.marqueetext.widget.MarqueeText
-        android:id="@+id/marqueeText"
-        app:mode="rolled"
-        app:speed="50"
+        android:id="@+id/marqueeText_left"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/linerLayout"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
         android:ellipsize="marquee"
         android:singleLine="true"
         android:text="自定义跑马灯TextView。项目地址：https://github.com/Winfred1989/MarQueeText"
-        android:textColor="@android:color/black" />
-</RelativeLayout>
+        android:textColor="@android:color/black"
+        app:mode="left"
+        app:speed="50" />
+
+    <com.jay.marqueetext.widget.MarqueeText
+        android:id="@+id/marqueeText_right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="自定义跑马灯TextView。项目地址：https://github.com/Winfred1989/MarQueeText"
+        android:textColor="@android:color/black"
+        app:mode="right"
+        app:speed="50" />
+
+    <com.jay.marqueetext.widget.MarqueeText
+        android:id="@+id/marqueeText_rolled"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="自定义跑马灯TextView。项目地址：https://github.com/Winfred1989/MarQueeText"
+        android:textColor="@android:color/black"
+        app:mode="rolled"
+        app:speed="50" />
+</LinearLayout>
